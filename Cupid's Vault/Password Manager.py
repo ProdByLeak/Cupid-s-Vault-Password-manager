@@ -614,9 +614,9 @@ def view_password_flow(group_name, label):
     while True:
         clear_screen()
         section_header(f"[{group_name}] {label}")
-        print(f"\nPassword: {LIGHT_BLUE}{pwd}{RESET}")
+        print(f"\nPassword: {get_hl()}{pwd}{RESET}")
         if username:
-            print(f"User:     {LIGHT_BLUE}{username}{RESET}")
+            print(f"User:     {get_hl()}{username}{RESET}")
         instruction("\nENTER = back to group view   B = back to main menu")
         key = read_key()
         if key == "ENTER":
